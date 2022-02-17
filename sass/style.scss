@@ -1,0 +1,70 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  padding: 0.5rem 0;
+}
+
+.input {
+  margin-right: 0.5rem;
+}
+
+.weather {
+  background-color: #ecebe6;
+  
+  
+  &__icon {
+      width: 80px;
+    }
+    &__title {
+        text-align: center;
+    }
+    &__box {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem;
+        transition: height 0.3s;
+  }
+  &__temp {
+      font-size: 36px;
+    }
+}
+
+.more{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 0;
+    overflow: hidden;
+    transition: all .3s;
+
+    &__box {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-transform: uppercase;
+        height: 65px;
+        width: 50%;
+        &-one{
+            background-color: pink;
+        }
+        &-two{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: rgb(221, 88, 111);
+        }
+    }
+    }
+
+.more-active{
+    height: 65px;
+}
