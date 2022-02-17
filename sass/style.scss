@@ -2,7 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: sans-serif;
+  font-family: 'Source Code Pro', monospace;
 }
 
 .header {
@@ -16,16 +16,18 @@
 }
 
 .weather {
-  background-color: #ecebe6;
   
+  // background-color: #ecebe6;
   
   &__icon {
-      width: 80px;
-    }
-    &__title {
-        text-align: center;
-    }
-    &__box {
+    width: 80px;
+  }
+  &__title {
+    text-align: center;
+    font-size: 30px;
+    font-weight: 300;
+  }
+  &__box {
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -33,7 +35,8 @@
         transition: height 0.3s;
   }
   &__temp {
-      font-size: 36px;
+      font-size: 30px;
+      font-weight: 300;
     }
 }
 
@@ -42,6 +45,7 @@
     justify-content: space-between;
     align-items: center;
     height: 0;
+    padding: 0 2rem;
     overflow: hidden;
     transition: all .3s;
 
@@ -49,22 +53,17 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        flex-direction: column;
         text-transform: uppercase;
         height: 65px;
-        width: 50%;
-        &-one{
-            background-color: pink;
-        }
-        &-two{
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            background-color: rgb(221, 88, 111);
-        }
+      
     }
     }
 
 .more-active{
     height: 65px;
+}
+
+.feelsLike__title, .humidity__title{
+  font-size: 12px;
 }
