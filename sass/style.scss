@@ -9,6 +9,10 @@
 
 .header {
   padding: .5rem 0 1rem 0;
+  position: fixed;
+  top: 0;
+  background: white;
+  width: 100vw;
 }
 
 .title{
@@ -64,13 +68,15 @@
       font-weight: 300;
     }
 }
-
+.weatherAll{
+  margin-top: 110px;
+}
 .more{
     display: flex;
     justify-content: space-between;
     align-items: center;
     height: 0;
-    padding: 0 .4rem;
+    padding: 0 2rem;
     overflow: hidden;
     transition: all .3s;
 
@@ -85,14 +91,38 @@
     }
 
 .more-active{
-    height: 65px;
-}
+    height: 60px;
+    padding-bottom: 16px;
+    border-bottom:1px solid rgba(0, 0, 0, 0.329);
+  }
 
-.feelsLike__title, .humidity__title{
-  font-size: 12px;
+  .feelsLike__title, .humidity__title{
+    font-size: 12px;
+  }
+  
+  .warning{
+    text-align: center;
+    margin: .5rem 0 1rem 0;
+  }
+  
+  @media(min-width: 700px){
+    .weather{
+    width: 400px;
+    margin: .5rem;
+  }
+  .weatherAll{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .more{
+    height: 60px;
+    padding-bottom: 16px;
+    border: none;
+  }
 }
-
-.warning{
-  text-align: center;
-  margin: .5rem 0 1rem 0;
-}
+//   @media(min-width: 992px){
+//     .weather{
+//     width: 30%;
+//   }
+// }

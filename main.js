@@ -3,6 +3,7 @@ const header = document.querySelector(".header")
 const input = document.querySelector(".input");
 const inputBtn = document.querySelector(".input__btn");
 const warningText = document.querySelector(".warning");
+const weather = document.querySelector(".weatherAll")
 
 const KEY = "d70a130bfc2ca74d614f94cfe8657680";
 const URL = "https://api.openweathermap.org/data/2.5/weather?q=";
@@ -33,7 +34,7 @@ const getWeather = () => {
       const humidityTitle = document.createElement("p");
       const humidityInfo = document.createElement("p");
       // append
-      document.body.append(weatherContainer);
+      weather.append(weatherContainer);
       weatherContainer.append(weatherBox, moreContainer);
       weatherBox.append(weatherIcon, weatherTitle, weatherTemp);
       moreContainer.append(descriptionBox, feelsLikeBox, humidityBox);
@@ -102,7 +103,6 @@ const getWeather = () => {
 
       //push to array
       cityNames.push(weatherTitle.textContent.toLowerCase());
-      console.log(data);
     })
 
     .catch((err) => {

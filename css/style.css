@@ -8,6 +8,10 @@
 
 .header {
   padding: .5rem 0 1rem 0;
+  position: fixed;
+  top: 0;
+  background: white;
+  width: 100vw;
 }
 
 .title {
@@ -86,6 +90,10 @@
   font-weight: 300;
 }
 
+.weatherAll {
+  margin-top: 110px;
+}
+
 .more {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -97,7 +105,7 @@
       -ms-flex-align: center;
           align-items: center;
   height: 0;
-  padding: 0 .4rem;
+  padding: 0 2rem;
   overflow: hidden;
   -webkit-transition: all .3s;
   transition: all .3s;
@@ -122,7 +130,9 @@
 }
 
 .more-active {
-  height: 65px;
+  height: 60px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.329);
 }
 
 .feelsLike__title, .humidity__title {
@@ -132,5 +142,27 @@
 .warning {
   text-align: center;
   margin: .5rem 0 1rem 0;
+}
+
+@media (min-width: 700px) {
+  .weather {
+    width: 400px;
+    margin: .5rem;
+  }
+  .weatherAll {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .more {
+    height: 60px;
+    padding-bottom: 16px;
+    border: none;
+  }
 }
 /*# sourceMappingURL=style.css.map */
