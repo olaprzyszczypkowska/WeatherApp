@@ -43,6 +43,7 @@
   padding: 1rem;
   -webkit-transition: height 0.3s;
   transition: height 0.3s;
+  height: 112px;
 }
 
 .weather__temp {
@@ -61,7 +62,7 @@
       -ms-flex-align: center;
           align-items: center;
   height: 0;
-  padding: 0 2rem;
+  padding: 0 .4rem;
   overflow: hidden;
   -webkit-transition: all .3s;
   transition: all .3s;
@@ -91,5 +92,10 @@
 
 .feelsLike__title, .humidity__title {
   font-size: 12px;
+}
+
+.warning {
+  text-align: center;
+  margin: .5rem 0 1rem 0;
 }
 /*# sourceMappingURL=style.css.map */

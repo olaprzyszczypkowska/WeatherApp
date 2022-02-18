@@ -1,29 +1,26 @@
 // input
 const input = document.querySelector(".input");
 const inputBtn = document.querySelector(".input__btn");
+const warningText = document.querySelector(".warning");
 
 const KEY = "d70a130bfc2ca74d614f94cfe8657680";
 const URL = "https://api.openweathermap.org/data/2.5/weather?q=";
 
-// const showMoreWeather = () => {
-//   moreBox.classList.toggle("more-active");
-// };
+const cityNames = [];
 
 const getWeather = () => {
   const city = input.value;
   const API = URL + city + "&appid=" + KEY + "&units=metric";
-  // let temp = "";
-  // let description = "";
 
+  
   fetch(API)
     .then((response) => response.json())
 
     .then((data) => {
-      console.log(data);
       const weatherContainer = document.createElement("div");
       const weatherBox = document.createElement("div");
       const weatherIcon = document.createElement("img");
-      const weatherTitle = document.createElement("h2");
+     const weatherTitle = document.createElement("h2");
       const weatherTemp = document.createElement("p");
       //more weather
       const moreContainer = document.createElement("div");
@@ -67,7 +64,8 @@ const getWeather = () => {
       feelsLikeTemp.textContent = Math.floor(data.main.feels_like) + "°C";
       humidityInfo.textContent = data.main.humidity + "%";
       descriptionInfo.textContent = data.weather[0].main;
-      
+
+    // icons & background color
       if (data.weather[0].id >= 200 && data.weather[0].id <= 202) {
         weatherIcon.setAttribute("src", "/img/stormRain.svg");
         weatherContainer.style.backgroundColor = "#f79d65"
@@ -95,13 +93,17 @@ const getWeather = () => {
         weatherContainer.style.backgroundColor = "#cfe0c3"
         descriptionInfo.textContent = "Partly cloud";
       }
-
+// listeners
       weatherBox.addEventListener("click", function () {
         moreContainer.classList.toggle("more-active");
       });
       moreContainer.addEventListener("click", function () {
         moreContainer.classList.remove("more-active");
       })
+
+      //push to array
+      cityNames.push(weatherTitle.textContent.toLowerCase());
+
     })
 
     .catch((err) => {
@@ -109,4 +111,17 @@ const getWeather = () => {
     });
 };
 
-inputBtn.addEventListener("click", getWeather);
+
+
+inputBtn.addEventListener("click", function () {
+  if (cityNames.some((city) => city === input.value.toLowerCase()) ){
+    warningText.textContent = input.value.substring(0, 1).toUpperCase() + input.value.substring(1) + " is already on your weather list."
+  }else if (cityNames.length === 0){
+    getWeather()
+    warningText.textContent = ''
+  }  else {
+    getWeather()
+    warningText.textContent = ''
+  }
+}
+);
