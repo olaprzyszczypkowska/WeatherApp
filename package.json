@@ -1,0 +1,25 @@
+{
+  "name": "weatherapp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "dev": "webpack --config=Scripts/config/webpack.dev.js --watch",
+    "build": "webpack -d --progress ",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/olaprzyszczypkowska/WeatherApp.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/olaprzyszczypkowska/WeatherApp/issues"
+  },
+  "homepage": "https://github.com/olaprzyszczypkowska/WeatherApp#readme",
+  "devDependencies": {
+    "webpack-cli": "^4.9.2"
+  }
+}
