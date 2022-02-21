@@ -68,28 +68,28 @@ const getWeather = () => {
 
       // icons & background color
       if (data.weather[0].id >= 200 && data.weather[0].id <= 202) {
-        weatherIcon.setAttribute("src", "/img/stormRain.svg");
+        weatherIcon.setAttribute("src", "img/stormRain.svg");
         weatherContainer.style.backgroundColor = "#f79d65";
       } else if (data.weather[0].id >= 230 && data.weather[0].id < 300) {
-        weatherIcon.setAttribute("src", "/img/stormRain.svg");
+        weatherIcon.setAttribute("src", "img/stormRain.svg");
         weatherContainer.style.backgroundColor = "#f79d65";
       } else if (data.weather[0].id >= 210 && data.weather[0].id <= 221) {
-        weatherIcon.setAttribute("src", "/img/storm.svg");
+        weatherIcon.setAttribute("src", "img/storm.svg");
         weatherContainer.style.backgroundColor = "#f433e3f";
       } else if (data.weather[0].id >= 300 && data.weather[0].id < 600) {
-        weatherIcon.setAttribute("src", "/img/rain.svg");
+        weatherIcon.setAttribute("src", "img/rain.svg");
         weatherContainer.style.backgroundColor = "#c0d6df";
       } else if (data.weather[0].id >= 600 && data.weather[0].id < 700) {
-        weatherIcon.setAttribute("src", "/img/snow.svg");
+        weatherIcon.setAttribute("src", "img/snow.svg");
         weatherContainer.style.backgroundColor = "#caf0f8";
       } else if (data.weather[0].id === 800) {
-        weatherIcon.setAttribute("src", "/img/sun.svg");
+        weatherIcon.setAttribute("src", "img/sun.svg");
         weatherContainer.style.backgroundColor = "#fbc4ab";
       } else if ((data.weather[0].id > 801) & (data.weather[0].id < 900)) {
-        weatherIcon.setAttribute("src", "/img/cloud.svg");
+        weatherIcon.setAttribute("src", "img/cloud.svg");
         weatherContainer.style.backgroundColor = "#ede7e3";
       } else if (data.weather[0].id === 801) {
-        weatherIcon.setAttribute("src", "/img/partlyCloudy.svg");
+        weatherIcon.setAttribute("src", "img/partlyCloudy.svg");
         weatherContainer.style.backgroundColor = "#cfe0c3";
         descriptionInfo.textContent = "Partly cloud";
       }
